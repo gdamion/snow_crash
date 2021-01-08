@@ -28,3 +28,8 @@ write(1, "", 0)                                          = 0
 -> ln -s /home/user/level08/token /tmp/level08_ref
 -> ./level08 /tmp/level08_ref
 quif5eloekouj29ke0vouxean
+
+-> su flag08
+-> getflag
+25749xKZ8L7DkSCwJkT9dyv6f
+-> su level09

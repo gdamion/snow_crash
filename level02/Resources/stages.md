@@ -1,8 +1,16 @@
-1. Командой ls обнаруживаем в исходной директории файл level02.pcap
-2. .pcap - формат для записи логов в программе для аналитики сетевого потока WireShark
-3. Копируем файл с VM на свой хост (выполняется с хоста):
-4. Меняем права доступа на чтение файла (выполняется с хоста):
+1. We are given file `level02.pcap`
+2. .pcap - net trafic log format for WireShark
+3.(On outer Linux/MacOS host) Copy pcap file to outer host and change access rules
+```
+scp -P 4242 level02@<snow_crash VM IP adress>:/home/user/level02/level02.pcap .
 chmod 777 ./level02.pcap
+```
+4. (On outer Linux/MacOS host) Run WireShark with this file
+```
+wireshark ./
+```
+
+
 5. Запускаем WireShark, подав ему данный файл
 chmod 777 ./level02.pcap
 6. Видим лог передачи информацинных пакетов. Чтобы цельно увидеть, какую информацию они передавали, нажимаем на любой пакет правой кнопкой мыши -> Follow -> TCP Stream, получаем такой вывод:

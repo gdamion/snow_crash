@@ -1,17 +1,17 @@
-1. Ищем информацию о пользователе flag00 во всей файловой системе:
+1. Find any files owned bu user flag00
+```
 find / -user flag00
-2. Так как к почти всем файлам у нас нет доступа попробуем вывести только файлы с доступом, отправив вывод остальных в "черную дыру"
+```
+2. We barely can find anything in search ouput because of dispalying files with restricted access, so lets put their output into a "black hole"
+```
 find / -user flag00 2>/dev/null
-3. Мы нашли 2 доступных файла:
-/usr/sbin/john
-/rofs/usr/sbin/john
-В каждом лежит набор символов, похожий на флаг, однако он как пароль все же не подходит. Тогда предположим, что флаг зашифрован.
-4. По совету из видео о snow_crash из интры
-заходим на www.dcode.fr
-На нем видим список дешифраторов разных шифров, и пробуем прогнать нашу численную последовательность через первый же предложенный вариант - шифр Цезаря
-5. Расшифрованный флаг: nottoohardhere
-6. Переходим на юзер flag00, вводим пароль найденный выше
+```
+3. Search gave us 2 files: `/usr/sbin/john`, `/rofs/usr/sbin/john`. Every file contains list of sybols: **cdiiddwpgswtgt**. But unfortunately it's not a flag. Maybe it's encrypted/
+4. Go to https://www.dcode.fr/ (this website is recommended to use in intra video about snow_crash)
+5. Use 1-st decoder in list for text - for Caesar cipher. We get our flag: **nottoohardhere**
+6. Go to flag00 user and get flag:
+```
 su flag00
-7. По подсказке на экране выполняем команду getflag
-8. Получаем пароль для перехода на уровень 1: x24ti5gi3x0ol2eh4esiuxias
-9. Выполняем su level01 и вводим пароль
+getflag
+```
+7. Flag for level01: **x24ti5gi3x0ol2eh4esiuxias**

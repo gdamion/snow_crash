@@ -1,5 +1,5 @@
-1. Домашняя папка содержит исполнительный файл level06 и PHP-файл level06.php
-
+1. We are given `level06` binary executable and PHP `level06.php` file
+``` PHP
 #!/usr/bin/php
 <?php
 	function y($m)
@@ -21,17 +21,8 @@
 	$r = x($argv[1], $argv[2]);
 	print $r;
 ?>
-
-Код на вход берет имя файла, загружает из него содержимое, видоизменяет его и выводит в консоль.
-
-2. После недолгого поиска в сети оказалось, что preg_replace в сочетании с модификатором /e имеет уязвимость: он может выполнить код на PHP, помещенный извне в виде текста.
-https://medium.com/@isharaabeythissa/command-injection-preg-replace-php-function-exploit-fdf987f767df
-https://www.php.net/manual/en/function.preg-replace.php
-3. Создадим файл /tmp/php_exploit
-4. В данный файл нужно подать содержимое, чтобы после модификации \[x (.*)\] оно преобразовалось в исполняемую команду getflag. Содержимым будет
-[x (`getflag`)]
-5. Выполняем:
--> ./level06 /tmp/php_exploit
-PHP Notice:  Undefined variable: Check flag.Here is your token : wiok45aaoguiboiki2tuin6ub
- in /home/user/level06/level06.php(4) : regexp code on line 1
-6. Получаем токен для перехода на level07: wiok45aaoguiboiki2tuin6ub
+```
+2. Code takes filename as input, loads containing of this file, changing it and outputs to console
+3. After short search, `preg_replace()` [revealed](https://medium.com/@isharaabeythissa/command-injection-preg-replace-php-function-exploit-fdf987f767df) to be vulnerable when used with `/e` modifier: before changing input string, string is executed as PHP-code
+4. Create `/tmp/php_exploit`. Containing of this file will be string that after PHP modification `\[x (.*)\]` will result `getflag` shell command. Needed string is ``[x (`getflag`)]`` (backticks are needed to launch it as shell command)
+5. Launching `./level06 /tmp/php_exploit` results to flag for level07: **wiok45aaoguiboiki2tuin6ub**

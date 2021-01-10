@@ -21,7 +21,7 @@ def reverse(token):
 			decrypted += 256
 		elif decrypted >= 256:
 			decrypted -= 256
-		token_rev += chr(ord(c) - decrypt)
+		token_rev += chr(decrypted)
 		decrypt += 1
 	return token_rev
 

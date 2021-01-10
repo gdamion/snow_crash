@@ -1,17 +1,25 @@
-1. При запуске выводится сообщение о наличии новой почты
-2. По стандартному пути хранения писем /var/mail/ лежит файл level05, который содержит:
+1. Nothing is found first, and we try to find any clue. Let's check list of environmental variables:
+``` Bash
+/usr/bin/env
+```
+2. There is interesting line here: `MAIL=/var/mail/level05`. This file contains
+``` Bash
 */2 * * * * su -c "sh /usr/sbin/openarenaserver" - flag05
-3. Запись */2 * * * * напоминает формат записи времени в crontab. Соответсвенно скрипт /usr/sbin/openarenaserver видимо выполняется раз в 2 минуты.
-https://www.tutorialspoint.com/unix_commands/crontab.htm
-5. /usr/sbin/openarenaserver содержит
+```
+3. `*/2 * * * *` looks like format of [`crontab` utility](https://www.tutorialspoint.com/unix_commands/crontab.htm) for timed launch of programs. According to line above, shell script /usr/sbin/openarenaserver lauches every 2 minutes
+4. Script `/usr/sbin/openarenaserver` contains
+``` Bash
 #!/bin/sh
 
 for i in /opt/openarenaserver/* ; do
 	(ulimit -t 5; bash -x "$i")
 	rm -f "$i"
 done
-
-Из скрипта видно, что при выполнении он подбирает все файлы из /opt/openarenaserver/ и также выполняет их, после этого удаляя
-6. Создадим файл /opt/openarenaserver/flag05 с содержимым:
-getflag > /tmp/flag05
-7. Ожидаем в пределах 2 минут и обнаруживаем в /tmp/flag05 ключ для перехода для level06: viuaaale9huek52boumoomioc
+```
+5. Script grabs all files from `/opt/openarenaserver/`, executes them and deletes afterwards
+6. Let's create file `/opt/openarenaserver/flag05`, that will execute getflag when launched and write output to temporal file, and chane file permissions
+``` Bash
+echo "getflag > /tmp/flag05" > /opt/openarenaserver/flag05
+chmod 777 /opt/openarenaserver/flag05
+```
+7. Now wait for around 2 minutes. Than reveal in file /tmp/flag05 flag for level06 user: **viuaaale9huek52boumoomioc**

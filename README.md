@@ -31,28 +31,11 @@
 	- [level09](#level09)
 		- [Skills and resources](#skills-and-resources-9)
 		- [How to do](#how-to-do-9)
-	- [level10](#level10)
-		- [Skills and resources](#skills-and-resources-10)
-		- [How to do](#how-to-do-10)
-	- [level11](#level11)
-		- [Skills and resources](#skills-and-resources-11)
-		- [How to do](#how-to-do-11)
-	- [level12](#level12)
-		- [Skills and resources](#skills-and-resources-12)
-		- [How to do](#how-to-do-12)
-	- [level13](#level13)
-		- [Skills and resources](#skills-and-resources-13)
-		- [How to do](#how-to-do-13)
-	- [level14](#level14)
-		- [Skills and resources](#skills-and-resources-14)
-		- [How to do](#how-to-do-14)
 
 ## Introduction
 This is cybersecurity project by Ecole 42. It helps to learn some vulnerabilities in linux-based systems. Every task has its own level (user in ubuntu system), and access to the level can be recieved only from previous one.
 
 ---
-
-
 ## level00
 ### Skills and resources
 - `find` command
@@ -61,7 +44,6 @@ This is cybersecurity project by Ecole 42. It helps to learn some vulnerabilitie
 ### [How to do](/level00/Resources/stages.md)
 
 ---
-
 ## level01
 ### Skills and resources
 - Password storing in Linux
@@ -69,7 +51,6 @@ This is cybersecurity project by Ecole 42. It helps to learn some vulnerabilitie
 ### [How to do](/level01/Resources/stages.md)
 
 ---
-
 ## level02
 ### Skills and resources
 - Basic understanding of TCP/UDP packages traffic
@@ -78,8 +59,6 @@ This is cybersecurity project by Ecole 42. It helps to learn some vulnerabilitie
 ### [How to do](/level02/Resources/stages.md)
 
 ---
-
-
 ## level03
 ### Skills and resources
 - Executing binaries with commands for terminal in linux
@@ -88,8 +67,6 @@ This is cybersecurity project by Ecole 42. It helps to learn some vulnerabilitie
 ### [How to do](/level03/Resources/stages.md)
 
 ---
-
-
 ## level04
 ### Skills and resources
 - Basics of Perl language
@@ -99,8 +76,6 @@ This is cybersecurity project by Ecole 42. It helps to learn some vulnerabilitie
 ### [How to do](/level04/Resources/stages.md)
 
 ---
-
-
 ## level05
 ### Skills and resources
 - Mailing using Linux terminal
@@ -109,8 +84,6 @@ This is cybersecurity project by Ecole 42. It helps to learn some vulnerabilitie
 ### [How to do](/level05/Resources/stages.md)
 
 ---
-
-
 ## level06
 ### Skills and resources
 - Basics of PHP language
@@ -118,61 +91,20 @@ This is cybersecurity project by Ecole 42. It helps to learn some vulnerabilitie
 ### [How to do](/level06/Resources/stages.md)
 
 ---
-
-
 ## level07
 ### Skills and resources
 - Linux environmental variables
 ### [How to do](/level07/Resources/stages.md)
 
 ---
-
-
 ## level08
 ### Skills and resources
 - Creating sybolic links with `ln -s` command
 ### [How to do](/level08/Resources/stages.md)
 
 ---
-
-
 ## level09
 ### Skills and resources
 - Vriting your own token decoder with preferred language
 ### [How to do](/level09/Resources/stages.md)
 
----
-
-
-## level10
-### Skills and resources
-
-### [How to do](/level10/Resources/stages.md)
-
----
-
-## level11
-### Skills and resources
-
-### [How to do](/level11/Resources/stages.md)
-
----
-
-## level12
-### Skills and resources
-
-### [How to do](/level12/Resources/stages.md)
-
----
-
-## level13
-### Skills and resources
-
-### [How to do](/level13/Resources/stages.md)
-
----
-
-## level14
-### Skills and resources
-
-### [How to do](/level14/Resources/stages.md)

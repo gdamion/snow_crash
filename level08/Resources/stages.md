@@ -1,3 +1,4 @@
+## level08
 1. We are given `level08` binary executable and `token` text file, which we are restricted to read
 2. First try to run level08 without arguments
 ```
@@ -39,3 +40,7 @@ su flag08
 getflag
 ```
 8. Flag for level09: **25749xKZ8L7DkSCwJkT9dyv6f**
+
+### [< PREVIOUS LEVEL](../../level07/Resources/stages.md) | [NEXT LEVEL >](../../level09/Resources/stages.md)
+### [MAIN MENU](../../README.md)
+

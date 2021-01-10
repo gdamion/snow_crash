@@ -1,3 +1,4 @@
+## level02
 1. We are given file `level02.pcap`
 2. pcap - net trafic log format for WireShark
 3. (On outer Linux/MacOS host) Copy pcap file to outer host and change access rules
@@ -33,3 +34,6 @@ su flag02
 getflag
 ```
 10. Flag for level03: **kooda2puivaav1idi4f57q8iq**
+
+### [< PREVIOUS LEVEL](../../level01/Resources/stages.md) | [NEXT LEVEL >](../../level03/Resources/stages.md)
+### [MAIN MENU](../../README.md)

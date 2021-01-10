@@ -1,3 +1,4 @@
+## level09
 1. We are given `level09` binary executable and `token`. Reading token results to this: **f4kmm6p|=�p�n��DB�Du{��**
 2. It didn't work as password, so lets try to pass `token` file as parameter
 ```
@@ -83,3 +84,6 @@ su flag09
 getflag
 ```
 11. Flag for level10: **s5cAJpM8ev6XHw998pRWG728z**
+
+### [< PREVIOUS LEVEL](../../level08/Resources/stages.md)
+### [MAIN MENU](../../README.md)

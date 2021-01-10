@@ -1,3 +1,4 @@
+## level05
 1. Nothing is found first, and we try to find any clue. Let's check list of environmental variables:
 ``` Bash
 /usr/bin/env
@@ -23,3 +24,6 @@ echo "getflag > /tmp/flag05" > /opt/openarenaserver/flag05
 chmod 777 /opt/openarenaserver/flag05
 ```
 7. Now wait for around 2 minutes. Than reveal in file /tmp/flag05 flag for level06 user: **viuaaale9huek52boumoomioc**
+
+### [< PREVIOUS LEVEL](../../level04/Resources/stages.md) | [NEXT LEVEL >](../../level06/Resources/stages.md)
+### [MAIN MENU](../../README.md)

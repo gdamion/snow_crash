@@ -1,3 +1,4 @@
+## level07
 1. We are given `level07` binary executable, output when launched: "level07"
 2. Check the inner system calls
 ```
@@ -20,3 +21,7 @@ system("/bin/echo level07 "level07
 export LOGNAME=\`getflag\`
 ```
 4. Launching `./level07` results to flag for level08: **fiumuikeil55xe9cu4dood66h**
+
+### [< PREVIOUS LEVEL](../../level06/Resources/stages.md) | [NEXT LEVEL >](../../level08/Resources/stages.md)
+### [MAIN MENU](../../README.md)
+

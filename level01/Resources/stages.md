@@ -1,6 +1,7 @@
+## level01
 1.  Check file with info about users
 ``` Bash
-cat /etc/passwds
+cat /etc/passwd
 ```
 2. Every user here have it's password stored in `/etc/shadow` (`x` character means it), but user flag01 stores its password here
 ```
@@ -23,3 +24,6 @@ su flag01
 getflag
 ```
 7. Flag for level02: **f2av5il02puano7naaf6adaaf**
+
+### [< PREVIOUS LEVEL](../../level00/Resources/stages.md) | [NEXT LEVEL >](../../level02/Resources/stages.md)
+### [MAIN MENU](../../README.md)

@@ -1,3 +1,4 @@
+## level00
 1. Find any files owned bu user flag00
 ``` Bash
 find / -user flag00
@@ -15,3 +16,6 @@ su flag00
 getflag
 ```
 7. Flag for level01: **x24ti5gi3x0ol2eh4esiuxias**
+
+### [NEXT LEVEL >](../../level01/Resources/stages.md)
+### [MAIN MENU](../../README.md)
